@@ -1,16 +1,37 @@
 import get from 'lodash.get';
-import { createAction, createReducer } from 'redux-act';
+import {  createReducer } from 'redux-act';
 
-const initialState = { user: null };
+import { hGet } from '../../lib/fetch';
 
-const SET_USER = 'rm/auth/SET_USER';
-const setUser = createAction(SET_USER);
+import {
+    createApiRequest,
+    createApiActionNames,
+    createActions,
+    createApiReducers,
+    mapActionsToReducers
+} from '../../lib/redux-helpers';
+
+const initialState = {
+    token: {
+        isFetching: false,
+        result: null,
+        error: null,
+    }
+};
+
+const tokenActions = createActions(createApiActionNames('ns/auth/TOKEN'));
+const tokenReducers = createApiReducers('token');
+const tokenReducer = mapActionsToReducers(tokenActions, tokenReducers);
+
+export const fetchToken = ({ username, password }) => createApiRequest({
+    apiRequest: () => new Promise((resolve) => resolve({ username, password })),
+    onRequest: () => tokenActions.request(),
+    onSuccess: (response) => tokenActions.success(response),
+    onFailure: (error) => tokenActions.failure(error)
+});
 
 export const reducer = createReducer({
-    [setUser]: (state, payload) => ({
-        ...state,
-        user: payload
-    })
+    ...tokenReducer
 }, initialState);
 
-export const getUser = (state) => get(state, ['auth', 'user'], null);
+export const getToken = (state) => get(state, ['auth', 'token'], null);
