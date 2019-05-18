@@ -1,3 +1,6 @@
+# build
+build/*
+!build/.gitkeep
 # Logs
 logs
 *.log
@@ -59,3 +62,6 @@ typings/
 
 # next.js build output
 .next
+
+# .notes folder
+.notes

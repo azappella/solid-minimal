@@ -1,6 +1,7 @@
-import CleanWebpackPlugin from 'clean-webpack-plugin';
 
-import paths from './paths';
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const paths = require('./paths');
 
 module.exports = {
     mode: 'production',

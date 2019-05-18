@@ -26,7 +26,7 @@ module.exports = [
         use: ['url-loader?limit=10000', 'img-loader']
     },
     {
-        test: /\.s(a|c)ss$/,
+        test: /\.css$/,
         use: [
             {
                 loader: 'style-loader',
@@ -37,14 +37,7 @@ module.exports = [
                     modules: true,
                     localIdentName: '[name]__[local]___[hash:base64:5]',
                 },
-            },
-            {
-                loader: 'sass-loader',
-                query: {
-                    modules: true,
-                    localIdentName: '[name]__[local]___[hash:base64:5]',
-                },
-            },
+            }
         ],
     },
 ];

@@ -1,48 +1,34 @@
+## React Minimal
 
-<h1 align="center">
-<br>
-  <a href="https://github.com/leonardomso/react-bolt"><img src="https://i.imgur.com/GpQk5wG.png" alt="React Bolt" width=128"></a>
-<br>
-<br>
-React Bolt
-</h1>
+A simple and (relatively) minimal starter template for react.
 
-<p align="center">The best boilerplate for your React projects.</p>
-
-<p align="center">
-  <a href="http://makeapullrequest.com">
+<a href="http://makeapullrequest.com">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
-  </a>
-  <a href="https://opensource.org/licenses/MIT">
+</a>
+<a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT">
-  </a>
-</p>
+</a>
 
 <hr />
 
 ## Introduction
 
-This boilerplate contains all you need to start your next React.js project. Simple, robust, well-organized, all you need to do is clone, install and you're ready to start.
-
-I wrote a article for anyone who wants to learn how to build this boilerplate, if you want to learn just click [here](linksoon).
+This template contains all you need to start your next React project. All you need to do is clone, install and you're ready to start.
 
 ## Features
 
-This boilerplate features all the latest tools and practices in the industry.
-
-- ⚛ **React** — 16.7.0-alpha.0 with Hooks
-- ♻ **Redux with Redux Thunk** — State Management with middleware to handle async requests
-- 🛠 **Babel** — ES6 syntax, Airbnb & React/Recommended config
-- 🚀 **Webpack**  — Hot Reloading, Code Splitting, Optimized Build
-- 💅 **CSS** — Styled Components
+- ⚛ **React** — 16.8.6 (with hooks)
+- ♻ **Redux, redux-thunk, redux-act** — State Management with middleware and helpers
+- 🛠 **Babel** — ES6 syntax
+- 🚀 **Webpack**  — Hot Reloading, Code Splitting, Optimized Build (development/production)
+- 💅 **CSS** — Styled Components and regular CSS Loader if necessary
 - ✅  **Tests** — Jest, React Testing Library & Cypress
-- 💖  **Lint** — ESlint
-- 🐶  **Husky** — Prevent bad commits
+- 💖  **Lint** — ESlint, Airbnb & React/Recommended config
 
 ## Getting started
 
-1. Clone this repo using `https://github.com/leonardomso/react-bolt.git`
-2. Move to the appropriate directory: `cd react-bolt`.<br />
+1. Clone this repo using `https://github.com/azappella/react-minimal.git`
+2. Move to the appropriate directory: `cd react-minimal`.<br />
 3. Run `yarn` or `npm install` to install dependencies.<br />
 4. Run `npm start` to see the example app at `http://localhost:8080`.
 
@@ -55,15 +41,20 @@ This boilerplate features all the latest tools and practices in the industry.
 - `npm test` - run all tests
 - `npm run test:watch` - run all tests in watch mode
 - `npm run test:cover` - coverage mode
-- `npm run cypress:open` - starts cypress
-
-## Next features:
-
-- [ ] **Hot Module Replacement**: Better HMR support;
-- [ ] **CSS/Sass support**: Enable CSS/Sass support;
-- [ ] **PWA**: Turn into a PWA boilerplate;
-- [ ] **SEO**: SEO-ready;
 
 ## License
 
-MIT license, Copyright (c) 2018 Leonardo Maldonado.
+MIT license
+
+## Credit/Thanks
+
+This repository is a fork from [React Bolt](https://github.com/leonardomso/react-bolt), the excellent react starter template from [Leonardo Maldonado](https://github.com/leonardomso).
+
+Some key differences:
+
+- added redux-act
+- removed unecessary devDependencies
+- removed all babel plugins
+- removed support for sass
+- removed husky
+- removed jarvis

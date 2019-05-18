@@ -1,8 +1,8 @@
-import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-import paths from './paths';
-import rules from './rules';
+const paths = require('./paths');
+const rules = require('./rules');
 
 module.exports = {
     entry: paths.entryPath,
