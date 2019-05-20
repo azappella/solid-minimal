@@ -1,15 +1,13 @@
 import get from 'lodash.get';
 import {  createReducer } from 'redux-act';
 
-import { hGet } from '../../lib/fetch';
-
 import {
     createApiRequest,
     createApiActionNames,
     createActions,
     createApiReducers,
     mapActionsToReducers
-} from '../../lib/redux-helpers';
+} from '../../lib/redux-utils';
 
 const initialState = {
     token: {
