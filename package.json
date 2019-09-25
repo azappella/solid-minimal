@@ -4,7 +4,7 @@
     "description": "A minimal solid-js starter template",
     "main": "src/index.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=development webpack-dev-server --open",
+        "start": "cross-env NODE_ENV=development PORT=8080 webpack-dev-server --open",
         "build": "cross-env NODE_ENV=production webpack",
         "test": "jest",
         "test:watch": "yarn run test --watch",
@@ -30,6 +30,7 @@
         "clean-webpack-plugin": "^1.0.1",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.0",
+        "dotenv-webpack": "^1.7.0",
         "extract-text-webpack-plugin": "^3.0.2",
         "file-loader": "^3.0.1",
         "html-webpack-plugin": "^3.2.0",
@@ -48,8 +49,7 @@
     },
     "dependencies": {
         "history": "^4.9.0",
-        "solid-js": "^0.10.6",
-        "styled-components": "^4.2.0"
+        "solid-js": "^0.10.6"
     },
     "jest": {
         "setupFiles": [

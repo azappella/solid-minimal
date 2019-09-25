@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const paths = require('./paths');
 const rules = require('./rules');
@@ -25,6 +26,7 @@ module.exports = {
                 removeComments: true,
                 removeAttributeQuotes: true
             }
-        })
+        }),
+        new Dotenv()
     ]
 };
