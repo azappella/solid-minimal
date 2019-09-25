@@ -9,11 +9,6 @@ import './css/main.css';
 
 const history = createBrowserHistory();
 
-function navigate(e) {
-  e.preventDefault();
-  return (location) => history.push(`${location}`);
-}
-
 function createRouteHandler() {
   // Get the current location.
   const currentLocation = history.location;
@@ -24,7 +19,7 @@ function createRouteHandler() {
     console.log(action, location.pathname, location.state);
   });
   onCleanup(() => unlisten());
-  return match => match === getLocation();
+  return (match) => match === getLocation();
 }
 
 
@@ -50,7 +45,7 @@ const Settings = () => (
 );
 
 
-const NestedComponent = () => {
+const ExampleRouterChild = () => {
   const [router] = useRouter();
   // prettier-ignore
   return (
@@ -61,7 +56,7 @@ const NestedComponent = () => {
 };
 
 const App = () => {
-  const matches = createRouteHandler();
+  const { matches, getLocation } = createRouteHandler();
 
   return (
     <>
@@ -77,22 +72,22 @@ const App = () => {
             <Link to='/settings'>Settings</Link>
           </li>
         </ul>
-        <p>{`PUBLIC_URL: ${PUBLIC_URL}`}</p>
-        <p>{`SERVER_URL: ${SERVER_URL}`}</p>
         <Switch>
           <Match when={( matches('/')  )}>
             <Home />
-            <NestedComponent></NestedComponent>
+            <ExampleRouterChild></ExampleRouterChild>
           </Match>
           <Match when={( matches('/profile') )}>
             <Profile />
-            <NestedComponent></NestedComponent>
+            <ExampleRouterChild></ExampleRouterChild>
           </Match>
           <Match when={( matches('/settings') )}>
             <Settings />
-            <NestedComponent></NestedComponent>
+            <ExampleRouterChild></ExampleRouterChild>
           </Match>
         </Switch>
+        <p>{`PUBLIC_URL: ${PUBLIC_URL}`}</p>
+        <p>{`SERVER_URL: ${SERVER_URL}`}</p>
       </Router>
 
 
