@@ -1,6 +1,8 @@
 ## Solid Minimal
 
-A simple and (relatively) minimal starter template for [SolidJS](https://github.com/ryansolid/solid).
+**WIP**
+
+A simple and (relatively) minimal starter template for [Solid JS](https://github.com/ryansolid/solid).
 
 <a href="http://makeapullrequest.com">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
@@ -17,7 +19,7 @@ This template contains all you need to start your next SolidJS project. All you 
 
 ## Features
 
-- ⚛ **SolidJS** — A declarative, efficient, and flexible JavaScript library for building user interfaces. 
+- ⚛ **Solid JS** — A declarative, efficient, and flexible JavaScript library for building user interfaces. 
 - ♻ **Redux, redux-thunk, redux-act** — State Management with middleware and helpers
 - 🛠 **Babel** — ES6 syntax
 - 🚀 **Webpack**  — Hot Reloading, Code Splitting, Optimized Build (development/production)
@@ -46,7 +48,7 @@ MIT license
 
 ## Credit/Thanks
 
-This repository is a fork from [React Bolt](https://github.com/leonardomso/react-bolt), the excellent react starter template from [Leonardo Maldonado](https://github.com/leonardomso).
+This repository is a fork from [React Minimal](https://github.com/azappella/solid-minimal.git), which is itself a fork of [React Bolt](https://github.com/leonardomso/react-bolt), the excellent react starter template from [Leonardo Maldonado](https://github.com/leonardomso).
 
 Some key differences:
 
@@ -56,3 +58,4 @@ Some key differences:
 - removed support for sass
 - removed husky
 - removed jarvis
+- removed linter (for now)

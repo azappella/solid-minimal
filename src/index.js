@@ -3,6 +3,7 @@ import { render } from 'solid-js/dom';
 import { createBrowserHistory } from 'history';
 import { Link } from './components/link';
 import { Router, useRouter } from './components/router';
+import normalize from './css/normalize.css';
 
 const history = createBrowserHistory();
 
@@ -76,19 +77,19 @@ const App = () => {
           </li>
         </ul>
         <Switch>
-        <Match when={( matches('/')  )}>
-          <Home />
-          <NestedComponent></NestedComponent>
-        </Match>
-        <Match when={( matches('/profile') )}>
-          <Profile />
-          <NestedComponent></NestedComponent>
-        </Match>
-        <Match when={( matches('/settings') )}>
-          <Settings />
-          <NestedComponent></NestedComponent>
-        </Match>
-      </Switch>
+          <Match when={( matches('/')  )}>
+            <Home />
+            <NestedComponent></NestedComponent>
+          </Match>
+          <Match when={( matches('/profile') )}>
+            <Profile />
+            <NestedComponent></NestedComponent>
+          </Match>
+          <Match when={( matches('/settings') )}>
+            <Settings />
+            <NestedComponent></NestedComponent>
+          </Match>
+        </Switch>
       </Router>
 
 
