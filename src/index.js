@@ -56,7 +56,7 @@ const ExampleRouterChild = () => {
 };
 
 const App = () => {
-  const { matches, getLocation } = createRouteHandler();
+  const matches = createRouteHandler();
 
   return (
     <>
