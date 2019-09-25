@@ -1,6 +1,6 @@
 ## Solid Minimal
 
-A simple and (relatively) minimal starter template for react.
+A simple and (relatively) minimal starter template for [SolidJS](https://github.com/ryansolid/solid).
 
 <a href="http://makeapullrequest.com">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
@@ -13,11 +13,11 @@ A simple and (relatively) minimal starter template for react.
 
 ## Introduction
 
-This template contains all you need to start your next React project. All you need to do is clone, install and you're ready to start.
+This template contains all you need to start your next SolidJS project. All you need to do is clone, install and you're ready to start.
 
 ## Features
 
-- ⚛ **SolidJS** —
+- ⚛ **SolidJS** — A declarative, efficient, and flexible JavaScript library for building user interfaces. 
 - ♻ **Redux, redux-thunk, redux-act** — State Management with middleware and helpers
 - 🛠 **Babel** — ES6 syntax
 - 🚀 **Webpack**  — Hot Reloading, Code Splitting, Optimized Build (development/production)
