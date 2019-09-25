@@ -1,4 +1,4 @@
-## React Minimal
+## Solid Minimal
 
 A simple and (relatively) minimal starter template for react.
 
@@ -17,18 +17,18 @@ This template contains all you need to start your next React project. All you ne
 
 ## Features
 
-- ⚛ **React** — 16.8.6 (with hooks)
+- ⚛ **SolidJS** —
 - ♻ **Redux, redux-thunk, redux-act** — State Management with middleware and helpers
 - 🛠 **Babel** — ES6 syntax
 - 🚀 **Webpack**  — Hot Reloading, Code Splitting, Optimized Build (development/production)
 - 💅 **CSS** — Styled Components and regular CSS Loader if necessary
-- ✅  **Tests** — Jest, React Testing Library & Cypress
-- 💖  **Lint** — ESlint, Airbnb & React/Recommended config
+- ✅  **Tests** — Jest
+
 
 ## Getting started
 
-1. Clone this repo using `https://github.com/azappella/react-minimal.git`
-2. Move to the appropriate directory: `cd react-minimal`.<br />
+1. Clone this repo using `https://github.com/azappella/solid-minimal.git`
+2. Move to the appropriate directory: `cd solid-minimal`.<br />
 3. Run `yarn` or `npm install` to install dependencies.<br />
 4. Run `npm start` to see the example app at `http://localhost:8080`.
 
@@ -36,8 +36,6 @@ This template contains all you need to start your next React project. All you ne
 
 - `npm start` - start the dev server
 - `npm run build` - create a production ready build in `dist` folder
-- `npm run lint` - execute an eslint check
-- `npm run lint:fix` - execute an eslint and fix the errors
 - `npm test` - run all tests
 - `npm run test:watch` - run all tests in watch mode
 - `npm run test:cover` - coverage mode
