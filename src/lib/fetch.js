@@ -56,11 +56,13 @@ export const request = (method, url, data, options) => {
         } else {
             settings.body = data;
         }
-
     }
 
     return fetchAndCheck(appendUriToBaseUrl(url), settings);
 };
+
+export const jsonRequest = (method, url, data, options) =>
+    request(method, url, data, options).then(toJson);
 
 export const hGet = (url, data, options = {}) =>
     request('GET', url, data, options);
@@ -72,9 +74,6 @@ export const hPatch = (url, data, options = {}) =>
     request('PATCH', url, data, options);
 export const hDelete = (url, data, options = {}) =>
     request('DELETE', url, data, options);
-
-export const jsonRequest = (method, url, data, options) =>
-    request(method, url, data, options).then(toJson);
 
 export const jsonGet = (url, data, options = {}) =>
     jsonRequest('GET', url, data, options);

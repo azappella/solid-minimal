@@ -3,7 +3,9 @@ import { render } from 'solid-js/dom';
 import { createBrowserHistory } from 'history';
 import { Link } from './components/link';
 import { Router, useRouter } from './components/router';
-import normalize from './css/normalize.css';
+import { PUBLIC_URL, SERVER_URL } from './constants';
+import './css/normalize.css';
+import './css/main.css';
 
 const history = createBrowserHistory();
 
@@ -50,7 +52,6 @@ const Settings = () => (
 
 const NestedComponent = () => {
   const [router] = useRouter();
-
   // prettier-ignore
   return (
     <>
@@ -76,6 +77,8 @@ const App = () => {
             <Link to='/settings'>Settings</Link>
           </li>
         </ul>
+        <p>{`PUBLIC_URL: ${PUBLIC_URL}`}</p>
+        <p>{`SERVER_URL: ${SERVER_URL}`}</p>
         <Switch>
           <Match when={( matches('/')  )}>
             <Home />
